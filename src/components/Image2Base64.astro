@@ -1,0 +1,49 @@
+<div>
+  <main>
+    <h1>IMG to Base64</h1>
+    <input type="file" id="imageInput" accept="image/*" />
+    <img id="preview"/>
+    <textarea
+      id="base64Output"
+      rows="10"
+      readonly
+      placeholder="data:image/...;base64..."
+    ></textarea>
+  </main>
+</div>
+
+<script>
+  const imageInput = document.getElementById("imageInput");
+  const preview = document.getElementById("preview");
+  const base64Output = document.getElementById("base64Output");
+
+  imageInput.addEventListener("change", (e: Event) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const base64String = event.target?.result;
+      preview.src = base64String;
+      base64Output.value = base64String;
+    };
+
+    reader.readAsDataURL(file);
+  });
+</script>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  #preview {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+</style>

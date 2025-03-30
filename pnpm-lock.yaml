@@ -11,6 +11,9 @@ importers:
       astro:
         specifier: ^5.5.5
         version: 5.5.5(rollup@4.38.0)(typescript@5.8.2)
+      simpledotcss:
+        specifier: ^2.3.5
+        version: 2.3.5
 
 packages:
 
@@ -1084,6 +1087,9 @@ packages:
 
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
+
+  simpledotcss@2.3.5:
+    resolution: {integrity: sha512-hMpSAIrC6Zfrkgf/3cp2yAWKwql3+IZkwFlhuqlX2dS/aecCazrz2YrN8/6tJY3SYW1rP0Nm5GexHijZ+79f7A==}
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -2709,6 +2715,8 @@ snapshots:
     dependencies:
       is-arrayish: 0.3.2
     optional: true
+
+  simpledotcss@2.3.5: {}
 
   sisteransi@1.0.5: {}
 
